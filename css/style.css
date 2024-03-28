@@ -1,0 +1,77 @@
+.header {
+    color: aquamarine;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("../images/photo-1507133750040-4a8f57021571-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed  ;
+}
+.mycolor {
+    color: aquamarine;
+    background-color: brown;
+    font-style: italic;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gridimportance {
+    color: blueviolet;
+    font-size: 30%;
+}
+.footer {background-color: grey;
+    color: blueviolet;
+    border-color: black;
+    width:300px;
+    margin:auto}
+
+.foot { background-color: brown;
+    
+}
+
+#myVideo {
+    size: 0cap;
+   width: -50%;
+   height: -50%;
+  }
+  
+ 
+  .vidstyle {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 10%;
+    padding: 20px;
+  }
+  
+ 
+  #button {
+    width: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #button:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .update{
+    font-size: 50px;
+    text-align: center;
+  }
