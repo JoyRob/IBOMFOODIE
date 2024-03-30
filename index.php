@@ -1,4 +1,4 @@
-<
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +40,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="signup.html">REGISTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">LOGIN</a>
             </li>
           </ul>
           <form class="d-flex">

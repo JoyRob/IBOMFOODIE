@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("connect.php");
+include("db.php");
 include("logincheck.php");
 
 
@@ -61,6 +61,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		padding: 4px;
 		border: solid thin #aaa;
 		width: 100%;
+	
 	}
 
 	#button{
