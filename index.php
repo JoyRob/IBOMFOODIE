@@ -1,4 +1,6 @@
-
+<?php
+echo 'welcome home';
+?>
 
 <!DOCTYPE html>
 <html lang="en">

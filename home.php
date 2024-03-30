@@ -1,3 +1,12 @@
+<?php 
+session_start();
+echo 'abeg work';
+echo  $_SESSION['user']['email'];
+if (isset($_SESSION['user'])) {
+   echo $_SESSION['user']['email'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +16,7 @@
 </head>
 <body>
     <main>
-
+locale_accept_from_http
     </main>
     <section>
         
