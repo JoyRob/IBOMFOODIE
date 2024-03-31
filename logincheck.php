@@ -1,15 +1,14 @@
 <?php
-
-function check_login($con)
+function check_login($db, $id)
 {
 
-	if(isset($_SESSION['email']))
+	if(isset($_SESSION['user_id']))
 	{
 
-		$id = $_SESSION['email'];
-		$query = "select * from users where email = '$id' limit 1";
+		$id = $_SESSION['user_id'];
+		$query = "SELECT * FROM register WHERE user_id = '$id' LIMIT 1";
 
-		$result = mysqli_query($con,$query);
+		$result = mysqli_query($db,$query);
 		if($result && mysqli_num_rows($result) > 0)
 		{
 
@@ -19,7 +18,7 @@ function check_login($con)
 	}
 
 	//redirect to login
-	header("Location: login.php");
+	header("Location: index.php");
 	die;
 
 }

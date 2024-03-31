@@ -38,10 +38,13 @@
 ?>
 
 <head>
-	<title>IBOMFOODIE</title>
-	<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <style type="text/css">
+<title>IBOMFOODIE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/unsemantic-grid-responsive-tablet.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style type="text/css">
 	  .brand{
 	  	background: #cbb09c !important;
 	  }
@@ -54,6 +57,7 @@
   		padding: 20px;
   	}
   </style>
+  <?php include('components/header.php'); ?>
 </head>
 <body class="grey lighten-4">
 	<nav class="white z-depth-0">
@@ -73,7 +77,7 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<?php include('templates/header.php'); ?>
+	<?php include('components/header.php'); ?>
         
 </nav><BR></BR><BR></BR>
 	<section class="container grey-text">
@@ -93,6 +97,6 @@
 		</form>
 	</section>
 
-	<?php include('templates/footer.php'); ?>
+	<?php include('components/footer.php'); ?>
 
 </html>

@@ -1,67 +1,83 @@
 <?php
 session_start();
+include("db.php");
+include("logincheck.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+        $email = mysqli_real_escape_string($db, $_POST['email']);
+        $password = $_POST['password'];
 
-  $email = $_POST["email"];
-  $password = $_POST["password"];
-  $isValid  = false;
+        $query = "SELECT * FROM register WHERE email = ? LIMIT 1";
+        $stmt = mysqli_prepare($db, $query);
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) && empty($password)) {
-    echo "<p>Invalid email format. Please enter a valid email address and password.</p>";
-    $isValid  = false;
-  } else {
-    $isValid  = true;
-  }
-
-  if ($isValid) {
-
-    $_SESSION['user']['email'] = $email;
-    echo $_SESSION['user']['email'];
-    header("Location: home.php");
-  }
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+            if (password_verify($password, $user_data['password'])) {
+                $_SESSION['user_id'] = $user_data['user_id'];
+                header("Location: index.php");
+                exit();
+            }
+        }
+    }
+    echo "Wrong username or password!";
 }
-
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOGIN PAGE</title>
-  <link rel="stylesheet" href="css/login.css">
+	<title>Login</title>
 </head>
-
 <body>
-  <form action="login.php" method="POST">
-    <div class="imgcontainer">
-      <img src="images/83A23CAF-8340-4ED8-81D9-4270837A3DDD.png" alt="Avatar" class="avatar" id="login">
-    </div>
 
-    <div class="container">
-      <label for="uname"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required><br>
+	<style type="text/css">
+	
+	#text{
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required><br>
+		height: 25px;
+		border-radius: 5px;
+		padding: 4px;
+		border: solid thin #aaa;
+		width: 100%;
+	
+	}
 
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+	#button{
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
+		padding: 10px;
+		width: 100px;
+		color: white;
+		background-color: lightblue;
+		border: none;
+	}
+
+	#box{
+
+		background-color: grey;
+		margin: auto;
+		width: 300px;
+		padding: 20px;
+	}
+
+	</style>
+
+	<div id="box">
+		
+		<form method="post">
+			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
+
+			<input id="text" type="text" name="email"><br><br>
+			<input id="text" type="password" name="password"><br><br>
+
+			<input id="button" type="submit" value="Login"><br><br>
+
+			<a href="signup.html">Click to Signup</a><br><br>
+		</form>
+	</div>
 </body>
-<footer>
-
-</footer>
-
 </html>
