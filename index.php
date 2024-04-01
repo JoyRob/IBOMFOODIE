@@ -9,11 +9,10 @@ echo 'welcome home';
   <meta>
 
   <title>MY AKWAIBOM KITCHEN</title>
-
+<link rel="stylesheet" href="css/thefooter.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/unsemantic-grid-responsive-tablet.css">
   <link rel="stylesheet" href="./css/footer.css">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <body class="body">
@@ -155,28 +154,39 @@ Our chefs are higly qualified professionals in  the culinary proffesionals train
     </section>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae porro fugit nesciunt enim laborum quibusdam, modi ipsa odit atque nostrum voluptatum temporibus omnis nihil sed? Minus architecto laudantium autem tempore?</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nobis ullam officia, iste deleniti excepturi eaque? Magni modi maiores ea! Voluptatum optio aliquam vero hic amet nihil iure quidem officia?</p>
-  </Main>
+  </Main><br><br>
   
   <FOOter class="foot">
 
+    <ul class="social-media-links">
+        <li>
+            <a href="https://www.instagram.com/your_username">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.tiktok.com/@your_username">
+                <img src="images/tiktok.png" alt="TikTok">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/channel/your_channel_id">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/your_page">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/your_username">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+        </li>
+    </ul>
 
-    <p>
-      <a href="#">Legal</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Cookie Policy</a>
-      <a href="#">Intellectual Property</a>
-      <a href="#">Careers</a>
-      <a href="#">Careers portal</a>
-      <a href="#">Blog</a>
-    </p>
-    <p>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">YouTube</a>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
-    </p>
+
 
 
     <p>
@@ -184,11 +194,10 @@ Our chefs are higly qualified professionals in  the culinary proffesionals train
       <a href="#">Safety tips</a>
       <a href="#">Terms</a>
       <a href="#">Cookie Policy</a>
-      <a href="#">Privacy settings</a>
+      <a href="Privacypolicy.html">Privacy Policy</a>
     </p>
 
-    <h3> Creating the right connections</h3>
-    &copy; 2024 IBOM F00DIE GROUP LLC, All Rights Reserved
+    <h5 style="color: white;">&copy; 2024 IBOM FOODIE GROUP LLC. <br> All Rights Reserved</h5>
 
     
   </FOOter>
