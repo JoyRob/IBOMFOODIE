@@ -36,6 +36,55 @@
 	} // end POST check
 
 ?>
-  <?php include('components/header.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/thefooter.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="containerr">
+        <h2>RECIPE</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="fullname">Chef Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="recipe">Recipe title</label>
+                <input type="password" id="recipe" name="recipe" required>
+            </div>
+			<div class="form-group">
+                <label for="recipe">Ingredients</label>
+                <input type="password" id="recipe" name="recipe" required>
+            </div>
+            <button type="submit">ADD RECIPE</button>
+        </form>
+    </div>
+</body><br>
+
+<FOOter class="foot">
+      
+  <h5 style="color: white;">&copy; 2024 IBOM FOODIE GROUP LLC. <br> All Rights Reserved</h5>
+
+  
+</FOOter>
+
+
+</html>
+
 
 

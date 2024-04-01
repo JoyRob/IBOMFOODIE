@@ -26,11 +26,11 @@
                 <label for="confirm_password">Confirm Password:</label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
         </form>
 		<form method="post">
 			<br><br>
-
+			<p>Don't have an account yet?</p>
 			<a href="signup.html">Click to Signup</a><br><br>
 		</form>
     </div>
