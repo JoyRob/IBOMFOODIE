@@ -18,7 +18,7 @@ function check_login($db, $id)
 	}
 
 	//redirect to login
-	header("Location: index.php");
+	header("Location: Recipelist.html");
 	die;
 
 }

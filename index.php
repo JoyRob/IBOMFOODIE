@@ -192,8 +192,8 @@ Our chefs are higly qualified professionals in  the culinary proffesionals train
     <p>
       <a href="#">FAQ</a>
       <a href="#">Safety tips</a>
-      <a href="#">Terms</a>
-      <a href="#">Cookie Policy</a>
+      <a href="termsandconditions.html">Terms and condition</a>
+      <a href="cookiepolicy.html">Cookie Policy</a>
       <a href="Privacypolicy.html">Privacy Policy</a>
     </p>
 

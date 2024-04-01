@@ -5,6 +5,7 @@
 	</head>
 	<body>
         <!-- ========== HEADER ========== -->
+
 <?php 
 include('components/header.php')
 ?>
