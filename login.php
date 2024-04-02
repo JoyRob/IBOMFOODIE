@@ -31,7 +31,7 @@
 		<form method="post">
 			<br><br>
 			<p>Don't have an account yet?</p>
-			<a href="signup.html">Click to Signup</a><br><br>
+			<a href="signup.php">Click to Signup</a><br><br>
 		</form>
     </div>
 </body><br>
