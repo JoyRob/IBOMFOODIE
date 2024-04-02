@@ -1,0 +1,252 @@
+.header {
+    color: aquamarine;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("../images/photo-1507133750040-4a8f57021571-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.mycolor {
+    color: aquamarine;
+    background-color: brown;
+    font-style: italic;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gridimportance {
+    color: blueviolet;
+    font-size: 30%;
+}
+
+.footer {
+    background-color: grey;
+    color: blueviolet;
+    border-color: black;
+    width: 300px;
+    margin: auto;
+}
+
+.foot {
+    background-color: brown;
+}
+
+#myVideo {
+    size: 0cap;
+    width: -50%;
+    height: -50%;
+}
+
+.vidstyle {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 10%;
+    padding: 20px;
+}
+
+#button {
+    width: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#button:hover {
+    background: #ddd;
+    color: black;
+}
+
+.update {
+    font-size: 50px;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.containerr {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #f7f6f6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(241, 232, 232, 0.868);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000407;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Contents of thefooter.css */
+
+.social-media-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media-links li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-media-links img {
+    width: 30px; /* Adjust the size of the icons */
+    height: auto;
+}
+
+/* Contents of footer.css */
+
+.body {
+    background-color: rgb(0, 0, 0);
+    border-width: 0cap;
+    text-align: center;
+    color: #fff;
+}
+
+.foot {
+    color: rgb(243, 242, 242);
+    border-color: black;
+    width: auto;
+    text-align: center;
+    margin: auto;
+    background-image: url("/images/footerimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--bodyFont);
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--textColor);
+}
+
+.HEADER {
+    font-style: normal;
+    color: rgb(244, 248, 244);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+.main {
+    color: #fff;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: black;
+}
+
+.tom {
+    text-align: center;
+    text-decoration: double;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+.navigation li:last-child {
+    margin-right: 900px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    left: 0%;
+    top: 50%;
+    text-align: right;
+}
+
+.navigation li a:hover {
+    background-color: #555;
+}
+
+#mainimage {
+    width: 40px;
+    height: 150px;
+    margin-right: 40px;
+}
+
+.top {
+    text-align: center;
+}
+
+#joy {
+    width: 200px;
+}
+
+#buisnesslogo {
+    width: 50px;
+    height: 50px;
+}
