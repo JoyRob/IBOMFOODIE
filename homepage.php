@@ -1,3 +1,6 @@
+<!-- <?php
+echo 'welcome home';
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,10 +9,10 @@
   <meta>
 
   <title>MY AKWAIBOM KITCHEN</title>
-<link rel="stylesheet" href="css/thefooter.css">
+<!--link rel="stylesheet" href="css/thefooter.css"-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/unsemantic-grid-responsive-tablet.css">
-  <link rel="stylesheet" href="./css/footer.css">
+  <!--link rel="stylesheet" href="./css/footer.css"-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <body class="body">
@@ -18,40 +21,46 @@
 
     <!-- <nav class=""> -->
 
-    <nav class="navbar border py-0
-     navbar-expand-sm navbar-dark bg-BLACK">
-      <div class="container-fluid">
+    <nav class="navbar border py-0 navbar-expand-sm navbar-dark bg-BLACK">
+    <div class="container-fluid">
         <a class="navbar-brand" href="javascript:void(0)"><img src="images/83A23CAF-8340-4ED8-81D9-4270837A3DDD.png" alt="logo" id="buisnesslogo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Aboutus.php">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="addrecipe.php">ADD RECIPE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signupp.php">REGISTER</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">LOGIN</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search">
-            <button class="btn btn-primary" type="button">Search</button>
-          </form>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Aboutus.php">ABOUT US</a>
+                </li>
+                <?php
+                
+                $isLoggedIn = false; 
+                if (!$isLoggedIn) {
+                    echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="addrecipe.php">ADD RECIPE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html">REGISTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">LOGIN</a>
+                        </li>
+                    ';
+                }
+                ?>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+            </form>
         </div>
-      </div>
-    </nav>
-    </nav>
-    
+    </div>
+</nav>
+
     <div class="hero text-center text-white p-5"><br><br>
       <h1 class="HEADER mt-4 p-5 text-blue "> WELCOME TO IBOM FOODIE</h1>
       <h3>Learn to cook our local dishes from the best chefs in the game</h3>
