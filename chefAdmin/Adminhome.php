@@ -14,9 +14,9 @@
             <ul>
             <li><a href="dashboard.html" id="dashboard-link">Dashboard</a></li><br>
                 <li><a href="home.php" id="dashboard-link">Home</a></li><br>
-                <li><a href="manageprofile.php" id="profile-link">Manage Profile</a></li><br>
+                <li><a href="managerecipe.html" id="profile-link">Manage recipe</a></li><br>
                 <li><a href="addrecipe.php" id="add-recipe-link">Add Recipe</a></li><br>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="home.php">Logout</a></li>
             </ul>
         </div>
         <div class="content" id="Dashboard">

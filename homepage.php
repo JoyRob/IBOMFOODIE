@@ -35,23 +35,7 @@ echo 'welcome home';
                 <li class="nav-item">
                     <a class="nav-link" href="Aboutus.php">ABOUT US</a>
                 </li>
-                <?php
                 
-                $isLoggedIn = false; 
-                if (!$isLoggedIn) {
-                    echo '
-                        <li class="nav-item">
-                            <a class="nav-link" href="addrecipe.php">ADD RECIPE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="signup.html">REGISTER</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">LOGIN</a>
-                        </li>
-                    ';
-                }
-                ?>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="text" placeholder="Search">

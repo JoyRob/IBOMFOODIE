@@ -30,15 +30,6 @@
             <li class="nav-item">
               <a class="nav-link" href="index.php">HOME</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="addrecipe.php">ADD RECIPE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signupp.php">REGISTER</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">LOGIN</a>
-            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="text" placeholder="Search">
@@ -47,8 +38,21 @@
         </div>
       </div>
     </nav>
-    </nav>
-    
+    </nav><br><br><br>
+    <body>
+      
+    <div class="hero text-center text-white p-5"><br><br>
+      <h1 class="HEADER mt-4 p-5 text-blue "> GET TO KNOW MORE ABOUT US</h1>
+      <H5>WHO WE ARE, OUR VALUES AND OUR ETHICS</H5>
+
+      <iframe title="vimeo-player" src="https://player.vimeo.com/video/923134324?h=232b407a33" width="640" height="360" frameborder="0"    allowfullscreen class="container text-center"></iframe>
+      <p>Our famous stir-fry native pasta</p>
+      
+    </div>
+    <br>
+<br>
+      <h5>IbomFoodie is a web-based platform designed to showcase and discover Nigerian recipes, with a focus on the cuisine of the Akwa Ibom people. The application allows users to register as either Recipe Seekers or Chefs, enabling them to share or explore authentic Nigerian recipes and celebrate the local cultural delicacies of the Akwa Ibom people who are natives of the Southern part of Nigeria in West Africa. This recipe sharing Web application aims to provide a user-friendly environment that enhances meal coordination, recipe sharing, meal preparation techniques, ingredients portioning, feeding size planning, and recipe creation.</h5>
+    </body><br><br>
     
 
   

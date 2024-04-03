@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         
         $_SESSION["user_id"] = 1; 
-        header("Location: Recipelist.html"); 
+        header("Location: index.php"); 
         exit();
     } else {
         header("Location: login.php?error=missing_fields");

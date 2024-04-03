@@ -56,20 +56,19 @@
                 <input type="text" id="fullname" name="fullname" required>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email">Recipe Title</label>
                 <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="recipe">Recipe title</label>
-                <input type="password" id="recipe" name="recipe" required>
             </div>
 			<div class="form-group">
                 <label for="recipe">Ingredients</label>
                 <input type="password" id="recipe" name="recipe" required>
+            </div>
+            <div class="form-group">
+            <label for="recipe">Upload file</label>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload" name="submit">
+    </form>
             </div>
             <button type="submit">ADD RECIPE</button>
         </form>

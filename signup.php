@@ -20,9 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="body">
 
   <HEAder>
-
-    <!-- <nav class=""> -->
-
     <nav class="navbar border py-0
      navbar-expand-sm navbar-dark bg-BLACK">
       <div class="container-fluid">
@@ -51,20 +48,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </nav>
     </nav><br><br><br>
 <body>
-    <div class="containerr">
+    <div class="container">
       <h2>Welcome to Ibomfoodie</h2><br>
         
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      <form action="signupcheck.php" method="post">
             <div class="form-group">
               <h6>Please enter your details</h6>
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-            </div>
-            <div  class="form-group">
+            </div><br>
+            <div class="form-group">
             <label for="gender">Gender:</label>
                 <select id="text" name="gender" id="gender">
                   <option value="man" >Man</option>
@@ -76,14 +77,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <option value="gender not listed" >Gender Not Listed</option>
                   <option value="prefer not to say" >Prefer Not to Say</option>
                 </select>
-         </div><br>
+            </div>
+         
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" required>
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
             </div>
             <button type="submit">Register</button>
         </form>

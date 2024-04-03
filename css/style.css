@@ -40,7 +40,7 @@ nav.navbar {
 }
 
 .foot {
-    background-color: brown;
+    background-color: rgb(2, 0, 0);
 }
 
 #myVideo {
@@ -101,6 +101,7 @@ h2 {
 
 .form-group {
     margin-bottom: 20px;
+
 }
 
 label {
