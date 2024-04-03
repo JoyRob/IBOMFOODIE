@@ -64,6 +64,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
+            <div  class="form-group">
+            <label for="gender">Gender:</label>
+                <select id="text" name="gender" id="gender">
+                  <option value="man" >Man</option>
+                  <option value="woman" >Woman</option>
+                  <option value="transgender man" >Transgender Man</option>
+                  <option value="transgender woman">Transgender Woman</option>
+                  <option value="Non-binary" >Non-binary</option>
+                  <option value="Agender" >Agender</option>
+                  <option value="gender not listed" >Gender Not Listed</option>
+                  <option value="prefer not to say" >Prefer Not to Say</option>
+                </select>
+         </div><br>
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>

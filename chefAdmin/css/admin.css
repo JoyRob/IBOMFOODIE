@@ -65,3 +65,24 @@ h1 {
 }
 
 /* Add your custom styles below */
+.dashboard-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.detail {
+    flex-basis: 30%;
+    padding: 10px;
+    background-color: #444; /* Dark background color */
+    border-radius: 5px;
+}
+
+.detail h3 {
+    color: #fff; /* Light text color */
+}
+
+.detail p {
+    color: #ccc; /* Lighter text color */
+    margin-top: 5px;
+}

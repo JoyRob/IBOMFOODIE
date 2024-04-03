@@ -1,44 +1,22 @@
 <?php
-function check_login($db, $id)
-{
+session_start();
 
-	if(isset($_SESSION['user_id']))
-	{
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   
+    if (isset($_POST["email"]) && isset($_POST["password"])) {
+        $email = $_POST["email"];
+        $password = $_POST["password"];
 
-		$id = $_SESSION['user_id'];
-		$query = "SELECT * FROM register WHERE user_id = '$id' LIMIT 1";
-
-		$result = mysqli_query($db,$query);
-		if($result && mysqli_num_rows($result) > 0)
-		{
-
-			$user_data = mysqli_fetch_assoc($result);
-			return $user_data;
-		}
-	}
-
-	//redirect to login
-	header("Location: Recipelist.html");
-	die;
-
+        
+        $_SESSION["user_id"] = 1; 
+        header("Location: Recipelist.html"); 
+        exit();
+    } else {
+        header("Location: login.php?error=missing_fields");
+        exit();
+    }
+} else {
+    header("Location: login.php");
+    exit();
 }
-
-function random_num($length)
-{
-
-	$text = "";
-	if($length < 5)
-	{
-		$length = 5;
-	}
-
-	$len = rand(4,$length);
-
-	for ($i=0; $i < $len; $i++) { 
-		# code...
-
-		$text .= rand(0,9);
-	}
-
-	return $text;
-}
+?>
