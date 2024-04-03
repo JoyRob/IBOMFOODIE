@@ -41,39 +41,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>ADD RECIPE</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/thefooter.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 <body>
-    <div class="containerr">
-        <h2>RECIPE</h2>
-        <form action="#">
-            <div class="form-group">
-                <label for="fullname">Chef Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Recipe Title</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-			<div class="form-group">
-                <label for="recipe">Ingredients</label>
-                <input type="password" id="recipe" name="recipe" required>
-            </div>
-            <div class="form-group">
-            <label for="recipe">Upload file</label>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload" name="submit">
+       <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            border: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+    <h2>WELCOME TO THE HOME OF AMAZING RECIPES</h2>
+    <h4>Add New Recipe</h4>
+    <form action="add_recipe.php" method="post" enctype="multipart/form-data">
+        <label for="chefName">Chef Name:</label>
+        <input type="text" id="chefName" name="chefName" required><br>
+        
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" name="recipeName" required><br>
+        
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea id="ingredients" name="ingredients" rows="4" required></textarea><br>
+        
+        <label for="instructions">Instructions:</label><br>
+        <textarea id="instructions" name="instructions" rows="8" required></textarea><br>
+        
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image"><br>
+        
+        <label for="video">Video:</label>
+        <input type="file" id="video" name="video"><br>
+        
+        <input type="submit" value="Submit">
     </form>
-            </div>
-            <button type="submit">ADD RECIPE</button>
-        </form>
-    </div>
-</body><br>
+</body>
 
 <FOOter class="foot">
       
