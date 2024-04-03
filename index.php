@@ -34,7 +34,7 @@
               <a class="nav-link" href="Aboutus.php">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="addrecipe.php">VIEW RECIPE</a>
+              <a class="nav-link" href="Recipelist.html">VIEW RECIPE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="signup.php">SIGN UP</a>
