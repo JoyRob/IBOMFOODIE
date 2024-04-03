@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </nav>
     </nav><br><br><br>
 <body>
-    <div class="container">
+    <div class="containerr">
       <h2>Welcome to Ibomfoodie</h2><br>
         
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
