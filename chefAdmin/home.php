@@ -34,13 +34,7 @@
               <a class="nav-link" href="Aboutus.php">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="addrecipe.php">ADD RECIPE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signup.php">SIGN UP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">LOGIN</a>
+              <a class="nav-link" href="login.php">LOG OUT</a>
             </li>
           </ul>
           <form class="d-flex">

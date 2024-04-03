@@ -1,0 +1,67 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e58b8b; /* Dark background color */
+    color: #fff; /* Light text color */
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ddcccc; /* Dark container background color */
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* Light text color */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.menu ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #444; 
+}
+
+.menu ul li a:hover {
+    background-color: #b6e40f; /* Dark hover background color */
+}
+
+.content {
+    display: none;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Profile Styles */
+#profile {
+    display: block;
+}
+
+/* Recipe Styles */
+#recipes {
+    display: none;
+}
+
+/* Add your custom styles below */
