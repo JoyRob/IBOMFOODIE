@@ -1,3 +1,12 @@
+<?php
+// Include db.php for database connection
+include 'db.php';
+
+// Query to select all recipes
+$sql = "SELECT * FROM recipes";
+$result = mysqli_query($db, $sql);
+$row = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +52,7 @@
 
   <!-- Afang soup -->
   <div id="afang" class="container p-2 my-2 border">
-    <h4>Afang Soup</h4> 
-    
+    <h4>Afang Soup</h4>
     <img src="images/afang2.jpg" alt="Afang" class="rounded corners" style="max-width: 70%;">
     
     <p>
@@ -56,8 +64,6 @@
       step 2: Add palm oil, crayfish into cooked protein and allow to cook for about 10mins <br>
       step 3: Add washed and sliced water leaves, simmer until well cooked. <br>
       step 4: Add grinded afang and cook for 3 minutes and turn off the heat</p>
-
-      <h6 style="text-align: right;">Created by: Chef Hilda</h6>
   </div>
 
   <!-- Edikaekong soup -->
@@ -73,7 +79,6 @@
       step 2: Add palm oil, crayfish into cooked protein and allow to cook for about 10mins <br>
       step 3: Add washed and sliced water leaves, simmer until well cooked. <br>
       step 4: Add sliced ugu and cook for 3 minutes and turn off the heat</p>
-      <h6 style="text-align: right;">Created by: Chef Hilda</h6>
   </div>
 
   <!-- Atama soup -->
@@ -88,7 +93,6 @@
       step 1: Cook meat, stockfish, and dry fish with desired amount of seasoning <br>
       step 2: Add palm oil extract, atama spices, crayfish into cooked protein and allow to cook for about 15-20mins until it thickens <br>
       step 3: Add sliced atama leaves and cook for 3 minutes and turn off the heat</p>
-      <h6 style="text-align: right;">Created by: Chef T</h6>
   </div>
 
   <!-- Afia Efere soup -->
@@ -104,7 +108,6 @@
       step 2: Add palm a little amount of palm oil, crayfish into cooked protein and allow to cook for about 10mins <br>
       step 3: Add more water to desired amount and put in blended cocoyam into the boiling mixture, simmer until well thickened. <br>
       step 4: Add water leaves, palm oil, uziza leaves, crayfish, pepper, and salt and cook for 3 minutes and turn off the heat</p>
-      <h6 style="text-align: right;">Created by: Chef Tunde</h6>
   </div>
 
   <!-- Fisherman soup -->
@@ -119,7 +122,6 @@
       step 1: Cook meat, fresh fish, periwinkle, prawns, beef or chicken, stockfish, and dry fish with desired amount of seasoning <br>
       step 2: Add palm oil, seasoning, crayfish into cooked protein and allow to cook for about 15-20mins until it thickens <br>
       step 3: Add sliced scent leaves and cook for 3 minutes and turn off the heat</p>
-      <h6 style="text-align: right;">Created by: Chef T</h6>
   </div>
 
   <h3>SPECIAL DISHES FOR OCCASIONS</h3>
@@ -136,7 +138,6 @@
       step 1: Cook meat, stockfish, and dry fish with desired amount of seasoning <br>
       step 2: Grate cocoyam, three leaf yam and water yam. Cook grated cocoyam in wrapped leaves. then place one after the other into the pot with cut and washed perewinkle at the bottom<br>
       step 3: Add boiling water, crayfish and all the protein into the pot, with the cocoyam cook for 3 minutes and turn off the heat</p>
-      <h6 style="text-align: right;">Created by: Chef Tunde</h6>
   </div>
 
   <!-- Yam Porridge -->
@@ -150,8 +151,6 @@
       <h5>Method of Preparation</h5>
       step 1: Steam fresh fish, stockfish, and onions with desired amount of seasoning <br>
       step 2: Boil yam until soft. Add fresh fish, crayfish, pepper, leaves, onions, palm oil, and salt. Simmer until well cooked <br>
-
-      <h6 style="text-align: right;">Created by: Chef T</h6>
   </div>
 
   <!-- Peppersoup Yam -->
@@ -166,8 +165,7 @@
       step 1: Steam goat meat, stockfish, and onions with desired amount of seasoning <br>
       step 2: Put chopped yam cubes into the steamed meat, add desired amount of water and cook till soft <br>
       Step 3: Add crayfish, pepper, scent leaves, onions, and salt. Simmer until well cooked and turn off heat<br>
-      <h6 style="text-align: right;">Created by: Chef Hilda</h6>
-    </div>
+  </div>
 
   <div id="stew" class="container p-2 my-2 border">
     <h4>Stew</h4>
@@ -183,8 +181,9 @@
       step 2: Add groundnut oil, crayfish into cooked protein and allow to cook for about 10mins <br>
       step 3: Add washed and sliced water leaves, simmer until well cooked. <br>
       step 4: Add grinded afang and cook for 3 minutes and turn off the heat</p>
-      <h6 style="text-align: right;">Created by: Chef Tunde</h6>
-    </div>
+  </div>
+
+    <?php include 'display_recipes.php'; ?>
 
   <footer class="foot">
     <ul class="social-media-links">

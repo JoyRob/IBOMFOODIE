@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
 
-  <title>Log in</title>
+  <title>sign up</title>
 <link rel="stylesheet" href="css/thefooter.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./css/footer.css">
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <a class="nav-link" href="Aboutus.php">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="signup.php">SIGN UP</a>
+              <a class="nav-link" href="login.php">LOGIN</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -46,41 +46,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
       </div>
     </nav>
-    </nav><br><br><br><br>
+    </nav><br><br><br>
 <body>
     <div class="container">
       <h2>Welcome to Ibomfoodie</h2><br>
-      <h6>  Enter your details to login</h6>
         
-      <form action="logincheck.php" method="post">
-            
+      <form action="signupcheck.php" method="post">
+            <div class="form-group">
+              <h6>Please enter your details</h6>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-           
+            </div><br>
+            <div class="form-group">
+            <label for="gender">Gender:</label>
+                <select id="text" name="gender" id="gender">
+                  <option value="man" >Man</option>
+                  <option value="woman" >Woman</option>
+                  <option value="transgender man" >Transgender Man</option>
+                  <option value="transgender woman">Transgender Woman</option>
+                  <option value="Non-binary" >Non-binary</option>
+                  <option value="Agender" >Agender</option>
+                  <option value="gender not listed" >Gender Not Listed</option>
+                  <option value="prefer not to say" >Prefer Not to Say</option>
+                </select>
+            </div>
          
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-
-            <button type="submit">LOGIN</button>
-            <?php
-    // Check if an error message exists in the URL
-    if (isset($_GET['error'])) {
-        $error = $_GET['error'];
-        if ($error == "empty_fields") {
-            echo "<p style=\"color: red;\">Please fill in all fields</p>";
-        } elseif ($error == "incorrect_password") {
-            echo "<p style=\"color: red;\">Incorrect email or password</p>";
-        } elseif ($error == "user_not_found") {
-            echo "<p style=\"color: red;\">User not found</p>";
-        }
-    }
-    ?>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+            </div>
+            <button type="submit">Register</button>
         </form>
     </div>
-</body><br><br><br><br><br><br><br><br>
+</body><br>
 
 <FOOter class="foot">
       

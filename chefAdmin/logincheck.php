@@ -7,10 +7,11 @@ $password = $_POST['password'];
 
 // Basic input validation
 if (empty($email) || empty($password)) {
-    echo "Email and password are required";
+    header("Location: login.php?error=empty_fields");
+    exit();
 } else {
     // Prepared statement to prevent SQL injection
-    $sql = "SELECT user_id, firstname, lastname, email, password FROM register WHERE email = ?";
+    $sql = "SELECT user_id, firstname, lastname, email, password FROM chefadmin WHERE email = ?";
     $stmt = mysqli_prepare($db, $sql);
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);

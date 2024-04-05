@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2024 at 12:09 AM
+-- Generation Time: Apr 04, 2024 at 07:18 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,15 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recipe`
+-- Table structure for table `chefadmin`
 --
 
-CREATE TABLE `recipe` (
-  `recipe_id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `recipetitle` varchar(100) NOT NULL,
+CREATE TABLE `chefadmin` (
+  `user_id` int(11) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `gender` varchar(20) DEFAULT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipes`
+--
+
+CREATE TABLE `recipes` (
+  `id` int(11) NOT NULL,
+  `chefName` varchar(255) NOT NULL,
+  `recipeName` varchar(255) NOT NULL,
   `ingredients` text NOT NULL,
-  `chefname` varchar(100) DEFAULT NULL,
+  `instructions` text NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `video` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -56,11 +73,17 @@ CREATE TABLE `register` (
 --
 
 --
--- Indexes for table `recipe`
+-- Indexes for table `chefadmin`
 --
-ALTER TABLE `recipe`
-  ADD PRIMARY KEY (`recipe_id`),
-  ADD KEY `user_id` (`user_id`);
+ALTER TABLE `chefadmin`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `recipes`
+--
+ALTER TABLE `recipes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `register`
@@ -74,26 +97,22 @@ ALTER TABLE `register`
 --
 
 --
--- AUTO_INCREMENT for table `recipe`
+-- AUTO_INCREMENT for table `chefadmin`
 --
-ALTER TABLE `recipe`
-  MODIFY `recipe_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `chefadmin`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `recipes`
+--
+ALTER TABLE `recipes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `recipe`
---
-ALTER TABLE `recipe`
-  ADD CONSTRAINT `recipe_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `register` (`user_id`);
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

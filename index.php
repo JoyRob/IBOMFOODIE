@@ -37,7 +37,7 @@
                                 // If user is logged in, show different links
                                 echo '
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Recipelist.html">VIEW RECIPE</a>
+                                    <a class="nav-link" href="Recipelist.php">VIEW RECIPE</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="logout.php">LOGOUT</a>
@@ -200,7 +200,7 @@ Our chefs are higly qualified professionals in  the culinary proffesionals train
 
     <p>
       <a href="#">FAQ</a>
-      <a href="#">Safety tips</a>
+      <a href="feedbackform.html">Feedback Form</a>
       <a href="termsandconditions.html">Terms and condition</a>
       <a href="cookiepolicy.html">Cookie Policy</a>
       <a href="Privacypolicy.html">Privacy Policy</a>

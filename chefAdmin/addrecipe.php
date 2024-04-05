@@ -1,41 +1,57 @@
-<?php 
-	if(isset($_POST['submit'])){
+<?php
 
-		$email = $recipetitle = $ingredients = '';
-		
-		// check email
-		if(empty($_POST['email'])){
-			echo 'An email is required <br />';
-		} else{
-			$email = $_POST['email'];
-			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-				echo 'Must be a valid email address';
-			}
-		}
+include 'db.php';
 
-		// check title
-		if(empty($_POST['recipetitle'])){
-			echo 'A recipe title is required <br />';
-		} else{
-			$title = $_POST['title'];
-			if(!preg_match('/^[a-zA-Z\s]+$/', $title)){
-				echo 'Title must be letters and spaces only';
-			}
-		}
+// Check if the form is submitted
+if(isset($_POST['submit'])){
+    // Prepare and bind SQL statement
+    $stmt = $db->prepare("INSERT INTO recipes (chefName, recipeName, ingredients, instructions, image, video) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $chefName, $recipeName, $ingredients, $instructions, $image, $video);
 
-		// check ingredients
-		if(empty($_POST['ingredients'])){
-			echo 'must enter at least one ingredient <br />';
-		} else{
-			$ingredients = $_POST['ingredients'];
-			if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)){
-				echo 'Ingredients must be a comma separated list';
-			}
-		}
+    // Set parameters and execute
+    $chefName = $_POST['chefName'];
+    $recipeName = $_POST['recipeName'];
+    $ingredients = $_POST['ingredients'];
+    $instructions = $_POST['instructions'];
 
-	} // end POST check
+    // Check if image file is uploaded
+    if($_FILES['image']['name']) {
+        if ($_FILES['image']['size'] > 20 * 1024 * 1024) {
+            $errorMessage = 'The image file size exceeds the maximum allowed size of 20MB.';
+        } else {
+            $image = $_FILES['image']['name'];
+            move_uploaded_file($_FILES['image']['tmp_name'], 'chefimages/' . $image);
+        }
+    } else {
+        $image = "";
+    }
 
+    // Check if video file is uploaded
+    if($_FILES['video']['name']) {
+        if ($_FILES['video']['size'] > 20 * 1024 * 1024) {
+            $errorMessage = 'The video file size exceeds the maximum allowed size of 20MB.';
+        } else {
+            $video = $_FILES['video']['name'];
+            move_uploaded_file($_FILES['video']['tmp_name'], 'chefvideos/' . $video);
+        }
+    } else {
+        $video = "";
+    }
+
+    // Execute SQL statement if no error message
+    if (!isset($errorMessage)) {
+        if ($stmt->execute()) {
+            $successMessage = "New recipe added successfully!";
+        } else {
+            $errorMessage = "Error: " . $stmt->error;
+        }
+    }
+
+    // Close statement
+    $stmt->close();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +65,7 @@
 
 </head>
 <body>
-       <style>
+    <style>
         body {
             background-color: #000;
             color: #fff;
@@ -100,11 +116,14 @@
             background-color: #ffdb4d;
         }
     </style>
-</head>
-<body>
     <h2>WELCOME TO THE HOME OF AMAZING RECIPES</h2>
     <h4>Add New Recipe</h4>
-    <form action="add_recipe.php" method="post" enctype="multipart/form-data">
+    <?php if (isset($errorMessage)): ?>
+        <p style="color: red;"><?php echo $errorMessage; ?></p>
+    <?php elseif (isset($successMessage)): ?>
+        <p style="color: green;"><?php echo $successMessage; ?></p>
+    <?php endif; ?>
+    <form action="" method="POST" enctype="multipart/form-data">
         <label for="chefName">Chef Name:</label>
         <input type="text" id="chefName" name="chefName" required><br>
         
@@ -118,12 +137,13 @@
         <textarea id="instructions" name="instructions" rows="8" required></textarea><br>
         
         <label for="image">Image:</label>
-        <input type="file" id="image" name="image"><br>
+        <input type="file" id="image" name="image" accept="image/*"><br>
         
         <label for="video">Video:</label>
-        <input type="file" id="video" name="video"><br>
+        <input type="file" id="video" name="video" accept="video/*"><br>
         
-        <input type="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
+
     </form>
 </body>
 
@@ -136,6 +156,3 @@
 
 
 </html>
-
-
-
