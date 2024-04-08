@@ -12,7 +12,7 @@
         <h1>Welcome to your Dashboard</h1><br>
         <div class="menu">
             <ul>
-                <li><a href="home.php" id="dashboard-link">Home</a></li><br>
+                <li><a href="index.php" id="dashboard-link">Home</a></li><br>
                 <li><a href="managerecipe.html" id="profile-link">Manage recipe</a></li><br>
                 <li><a href="addrecipe.php" id="add-recipe-link">Add Recipe</a></li><br>
                 <li><a href="home.php">Logout</a></li>

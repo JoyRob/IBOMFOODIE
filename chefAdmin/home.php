@@ -97,7 +97,8 @@ Our chefs are higly qualified professionals in  the culinary proffesionals train
               </div>
         </SECtion>
         <section><br>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatem dolorem omnis at voluptatibus a provident sapiente natus, est incidunt explicabo, architecto voluptates ducimus cum aliquam illum. Inventore, ullam omnis?</p>
+          <p>Welcome to ibomfoodie, your ultimate destination for exploring the rich and diverse culinary traditions of Akwa Ibom!"
+"Discover the vibrant flavors, unique ingredients, and cultural heritage of Akwa Ibom cuisine right here."</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam nemo ipsa, velit reiciendis id blanditiis commodi repudiandae aliquam quidem, minus in aliquid voluptates dolores ab reprehenderit rem quos neque.</p>
           <h2 class="text-center"> SOME OF OUR BEST SELLING RECIPES</h2>
           <br>

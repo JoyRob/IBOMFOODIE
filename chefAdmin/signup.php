@@ -39,10 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <a class="nav-link" href="login.php">LOGIN</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search">
-            <button class="btn btn-primary" type="button">Search</button>
-          </form>
+          
         </div>
       </div>
     </nav>
